@@ -1,0 +1,29 @@
+﻿<l:PluginGuiWindow x:Class="VirtualHaController.AddHaVirtualDevice"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:l="clr-namespace:MLS.HA.DeviceController.Common.Gui;assembly=MLS.HA.DeviceController.Common"
+             mc:Ignorable="d" Height="165" Width="300" Title="Add InControl Virtual Device"
+             d:DesignHeight="165" d:DesignWidth="300">
+    
+    <Grid Margin="5">
+        <StackPanel>            
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Name: " Margin="0,0,46,0"/>
+                <TextBox Width="160" Name="txtDeviceName" Text="New Virtual Device"></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                <Label Content="Device Type" Margin="0,0,22,0"/>
+                <StackPanel>
+                    <RadioButton GroupName="deviceType" Name="rdoSwitch" VerticalAlignment="Center" IsChecked="True">Switch (on/off)</RadioButton>
+                    <RadioButton GroupName="deviceType" Name="rdoDimmer" VerticalAlignment="Center" >Dimmer (on/off/levels)</RadioButton>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0,10,0,0" HorizontalAlignment="Right">
+                <Button Content="Add Virtual Device" Margin="0,0,7,0" Click="btnAdd_click" Padding="5"></Button>
+                <Button Content="Cancel" Margin="0,0,7,0" Click="btnCancel_click" Padding="5"></Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</l:PluginGuiWindow>
